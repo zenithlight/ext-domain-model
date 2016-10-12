@@ -63,8 +63,8 @@ class FamilyTests : XCTestCase {
     mike.job = Job(title: "Burger-Flipper", type: Job.JobType.Hourly(5.5))
     
     let matt = Person(firstName: "Matt", lastName: "Neward", age: 16)
-    family.haveChild(mike)
-    family.haveChild(matt)
+    let _ = family.haveChild(mike)
+    let _ = family.haveChild(matt)
     
     let familyIncome = family.householdIncome()
     XCTAssert(familyIncome == 12000)
